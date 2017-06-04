@@ -103,6 +103,6 @@ enter command: B 10 3 o
 enter command: Q
 ```
 #Dependencies
-..* java 1.8
-..* spock as testing framework
+* java 1.8
+* spock as testing framework
 
