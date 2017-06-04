@@ -125,7 +125,7 @@ class InteractiveDrawingBoardSpec extends Specification {
         notThrown OutsideBoundaryException
     }
 
-    def "if bucket fill command has coordinates inside canvas then color the canvas and not throw exceptions.OutsideBoundaryException"(){
+    def "if bucket fill command has coordinates(10,3) inside canvas then color the canvas(20,4) and not throw exceptions.OutsideBoundaryException"(){
         setup:
         ConsoleReader reader = Mock(ConsoleReader)
         ConsoleWriter consoleWriter = Mock(ConsoleWriter){

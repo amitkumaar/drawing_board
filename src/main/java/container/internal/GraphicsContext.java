@@ -90,16 +90,21 @@ public class GraphicsContext {
     }
 
     public void bucketFill(Point point, char Color) {
-        if (isInsideCanvas(point)
-                && display[point.getY()][point.getX()] == DisplayChars.EMPTY_CELL_CHAR) {
+        if (this.isInsideCanvas(point) && isValidForFill(point, Color)) {
             display[point.getY()][point.getX()] = Color;
             point.locateNeighbours().forEach(point1 -> bucketFill(point1, Color));
         }
     }
 
+    private boolean isValidForFill(Point point, char color) {
+        return display[point.getY()][point.getX()] != color
+                && (display[point.getY()][point.getX()] == DisplayChars.EMPTY_CELL_CHAR
+                || display[point.getY()][point.getX()] != DisplayChars.LINE_CHAR);
+    }
+
     public boolean isInsideCanvas(Point point) {
-        return (point.getX() <= display[0].length && point.getX() >= 1)
-                && (point.getY() >= 1 && point.getY() <= display.length);
+        return (point.getX() <= getWidth() && point.getX() >= 1)
+                && (point.getY() >= 1 && point.getY() <= getHeight());
 
     }
 
