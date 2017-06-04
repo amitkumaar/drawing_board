@@ -52,8 +52,8 @@ Q               Should quit the program.
  1. **InteractiveDrawingBoard** is main driver program
  2. user input are matched as reg-ex defined in **ValidCommands**
  3. **CommandFactory** is responsible to parse input and for invalid data return UNKNOW type
- 4. Line is made of Point(x,y), Rectangle is modeled as composition of Lines
- 5. **Canvas** is modled as container class which handles drwaing/re-drawing on console
+ 4. Line is composition Point(x,y)s, Rectangle is modeled as composition of Lines
+ 5. **Canvas** is modled as container class which handles drwaing/re-drawing on console once a shape being added to it.
  6. **GraphicsContext** encapsulates 2d char data-structure to handle state of drwaing board
 
 
