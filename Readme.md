@@ -1,15 +1,15 @@
-*** run cmd ***
-'''
+# run cmd
+```
 ./gradlew tasks drawing -q
 
-'''
-*** test cases ***
-'''
+```
+# test cases 
+```
 ./gradlew test
 
-'''
+```
 
-*** The Problem ***
+# The Problem 
 
 __Description__
 
@@ -34,9 +34,10 @@ B x y c         Should fill the entire area connected to (x,y) with "colour" c. 
                 programs.
 Q               Should quit the program.
 
-__Sample I/O__
+# solution
 
 Below is a sample run of the program. User input is prefixed with enter command:
+```
 
 enter command: C 20 4
 ----------------------
@@ -79,6 +80,6 @@ enter command: B 10 3 o
 ----------------------
 
 enter command: Q
-
+```
 
 
