@@ -15,6 +15,14 @@ enter command: Q
 
 ```
 
+# run below cmd for non-interactive run
+```
+./gradlew tasks nonInteractive -q
+
+```
+
+
+
 # The Problem 
 
 __Description__
@@ -41,6 +49,13 @@ B x y c         Should fill the entire area connected to (x,y) with "colour" c. 
 Q               Should quit the program.
 
 # solution
+..* **InteractiveDrawingBoard** is main driver program.
+..* user input are matched as reg-ex defined in **ValidCommands**.
+..* **CommandFactory** is responsible to parse input and for invalid data return UNKNOW type.
+..* Line is made of Point(x,y), Rectangle is modeled as composition of Lines..
+..* **Canvas** is modled as container class which handles drwaing/re-drawing on console
+..* **GraphicsContext** encapsulates 2d char data-structure to handle state of drwaing board.
+
 
 Below is a sample run of the program. User input is prefixed with **enter command:**
 ```
@@ -87,5 +102,7 @@ enter command: B 10 3 o
 
 enter command: Q
 ```
-
+#Dependencies
+..* java 1.8
+..* spock as testing framework
 
