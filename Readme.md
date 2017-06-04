@@ -49,12 +49,12 @@ B x y c         Should fill the entire area connected to (x,y) with "colour" c. 
 Q               Should quit the program.
 
 # solution
- 1. **InteractiveDrawingBoard** is main driver program
- 2. user input are matched as reg-ex defined in **ValidCommands**
- 3. **CommandFactory** is responsible to parse input and for invalid data return UNKNOW type
- 4. Line is composition Point(x,y)s, Rectangle is modeled as composition of Lines
- 5. **Canvas** is modled as container class which handles drwaing/re-drawing on console once a shape being added to it.
- 6. **GraphicsContext** encapsulates 2d char data-structure to handle state of drwaing board
+ * **InteractiveDrawingBoard** is main driver program
+ * user input are matched as reg-ex defined in **ValidCommands**
+ * **CommandFactory** is responsible to parse input and for invalid data return UNKNOW type
+ * Line is composition Point(x,y)s, Rectangle is modeled as composition of Lines
+ * **Canvas** is modled as container class which handles drwaing/re-drawing on console once a shape being added to it.
+ * **GraphicsContext** encapsulates 2d char data-structure to handle state of drwaing board
 
 
 Below is a sample run of the program. User input is prefixed with **enter command:**
