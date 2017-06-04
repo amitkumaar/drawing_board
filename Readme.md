@@ -1,7 +1,13 @@
-# run cmd
+# run below cmd and input as below
 ```
 ./gradlew tasks drawing -q
 
+enter command: C 20 4
+enter command: L 1 2 6 2
+enter command: L 6 3 6 4
+enter command: R 14 1 18 3
+enter command: B 10 3 o
+enter command: Q
 ```
 # test cases 
 ```
@@ -36,7 +42,7 @@ Q               Should quit the program.
 
 # solution
 
-Below is a sample run of the program. User input is prefixed with enter command:
+Below is a sample run of the program. User input is prefixed with **enter command:**
 ```
 
 enter command: C 20 4
